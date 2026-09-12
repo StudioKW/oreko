@@ -21,6 +21,7 @@
     "seed:reset": "prisma migrate reset --force && tsx prisma/seed.ts",
     "lint": "eslint .",
     "type-check": "tsc --noEmit"
+    "migrate:deploy": "prisma migrate deploy"
   },
   "dependencies": {
     "@prisma/client": "^6.1.0",
