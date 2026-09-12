@@ -176,6 +176,7 @@ export const COMMON_TIMEZONES = [
   'Europe/London',
   'Europe/Paris',
   'Europe/Berlin',
+  'Europe/Stockholm',
   'Europe/Amsterdam',
   'Asia/Tokyo',
   'Asia/Shanghai',
