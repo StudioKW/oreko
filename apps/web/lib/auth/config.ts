@@ -6,6 +6,8 @@ import { loginSchema } from '@/lib/validations/auth';
 import { logger } from '@/lib/logger';
 
 export const authConfig: NextAuthConfig = {
+  trustHost: true,
+  
   pages: {
     signIn: '/login',
     signOut: '/login',
