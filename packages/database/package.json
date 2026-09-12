@@ -20,7 +20,7 @@
     "seed:e2e:cleanup": "tsx prisma/seed-e2e-production.ts --cleanup",
     "seed:reset": "prisma migrate reset --force && tsx prisma/seed.ts",
     "lint": "eslint .",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
     "migrate:deploy": "prisma migrate deploy"
   },
   "dependencies": {
