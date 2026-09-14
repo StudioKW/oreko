@@ -144,7 +144,7 @@ export async function createStripeOnboardingLink(options?: {
 
       const account = await stripe.accounts.create({
         type: 'standard',
-        country: 'US',
+        country: 'SE',
         email: workspace?.businessProfile?.email || undefined,
         business_profile: {
           name: workspace?.businessProfile?.businessName || workspace?.name,

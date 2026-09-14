@@ -74,14 +74,25 @@ export function PaymentSettingsForm({ initialData, stripeEnabled }: PaymentSetti
     });
   };
 
-  const handleStripeConnect = () => {
-    startTransition(async () => {
+const handleStripeConnect = () => {
+  startTransition(async () => {
+    try {
       const result = await createStripeOnboardingLink();
+
+      console.log('Stripe Connect result:', result);
+
       if (result.success && result.url) {
         window.location.href = result.url;
+        return;
       }
-    });
-  };
+
+      toast.error(result.error || 'Kunde inte ansluta till Stripe');
+    } catch (error) {
+      console.error('Stripe Connect exception:', error);
+      toast.error('Kunde inte ansluta till Stripe');
+    }
+  });
+};
 
   const handleCheckStatus = async () => {
     setIsCheckingStatus(true);
