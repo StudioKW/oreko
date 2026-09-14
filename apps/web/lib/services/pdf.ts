@@ -368,7 +368,7 @@ export async function generateQuotePdf(params: {
   const url = `${baseUrl}/api/pdf/quote/${quoteId}`;
 
   return generatePdfFromUrl(url, {
-    displayHeaderFooter: true,
+    displayHeaderFooter: false,
     footerTemplate: `
       <div style="width: 100%; font-size: 10px; padding: 5px 15mm; color: #666; display: flex; justify-content: space-between;">
         <span>Quote ID: ${quoteId}</span>
@@ -387,7 +387,7 @@ export async function generateInvoicePdf(params: {
   const url = `${baseUrl}/api/pdf/invoice/${invoiceId}`;
 
   return generatePdfFromUrl(url, {
-    displayHeaderFooter: true,
+    displayHeaderFooter: false,
     footerTemplate: `
       <div style="width: 100%; font-size: 10px; padding: 5px 15mm; color: #666; display: flex; justify-content: space-between;">
         <span>Invoice ID: ${invoiceId}</span>

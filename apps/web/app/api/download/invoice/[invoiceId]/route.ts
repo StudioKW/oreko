@@ -59,7 +59,7 @@ export async function GET(
 
     const html = generateInvoicePdfHtml(data);
     const pdfBuffer = await generatePdfFromHtml(html, {
-      displayHeaderFooter: true,
+      displayHeaderFooter: false,
       footerTemplate: `
         <div style="width: 100%; font-size: 9px; padding: 5px 15mm; color: #9ca3af; display: flex; justify-content: space-between;">
           <span>${data.invoiceNumber}</span>
